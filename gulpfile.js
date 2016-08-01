@@ -9,7 +9,7 @@ gulp.task('compilepkg', function() {
 			templateData: {
 				stripPath: function(path) {
 					var subPath = path.substring(process.cwd().length + 5);
-					var pkg = subPath.substring(0, subPath.lastIndexOf("\\"));
+					var pkg = subPath.substring(0, subPath.lastIndexOf(path.sep));
 					return pkg;
 				}
 			}
